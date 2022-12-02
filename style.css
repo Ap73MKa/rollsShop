@@ -93,7 +93,7 @@ body {
     display: flex;
     width: 100%;
     height: 80px;
-    margin-top: 30px;
+    margin-top: 50px;
     align-items: center;
     justify-content: end;
     gap: 40px;
@@ -121,7 +121,9 @@ body {
     display: flex;
     justify-content: left;
     padding-left: 30px;
-    width: 500px;
+    max-width: 400px;
+    width: 75%;
+    min-width: 200px;
     height: 40px;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.02);
@@ -138,6 +140,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     height: 40px;
     width: 40px;
     border-radius: 50px;
@@ -146,7 +149,7 @@ body {
 }
 
 .main-icon {
-    height: 30px;
+    max-height: 30px;
 }
 
 .main-site {
@@ -154,6 +157,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
 }
 
 .main-site p {
@@ -172,17 +176,16 @@ body {
 }
 
 .good {
-    width: 280px;
+    max-width: 280px;
+    width: 40%;
     height: 270px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .good img {
-    position: relative;
-    top: 50px;
+
     width: 250px;
 
 }
@@ -198,6 +201,7 @@ body {
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.02);
     border-radius: 50px;
     gap: 5px;
+    overflow: hidden;
 }
 
 .text-block h2 {
