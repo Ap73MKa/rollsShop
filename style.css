@@ -77,8 +77,8 @@ body {
 }
 
 .main-block {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 5vw;
+    padding-right: 5vw;
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
@@ -96,7 +96,7 @@ body {
     margin-top: 50px;
     align-items: center;
     justify-content: end;
-    gap: 40px;
+    gap: 2vw;
 }
 
 .logo {
@@ -107,8 +107,9 @@ body {
 }
 
 .logo p {
-    font-size: 28px;
-    font-weight: 500;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: 600;
     color: #454545;
 }
 
@@ -153,11 +154,17 @@ body {
 }
 
 .main-site {
-    margin-top: 30px;
+    margin-top: 60px;
     width: 100%;
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    overflow-x: hidden;
+    align-content: stretch;
+}
+
+.main-site::-webkit-scrollbar {
+    width: 0;
 }
 
 .main-site p {
@@ -171,45 +178,53 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 2vw;
     justify-content: center;
 }
 
 .good {
-    max-width: 280px;
-    width: 40%;
-    height: 270px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 240px;
+    height: 300px;
+    overflow: auto;
+    display: inline-block;
+    justify-items: center;
+    text-align: center;
 }
 
-.good img {
-
-    width: 250px;
-
-}
-
-.text-block {
-    width: 250px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px 20px;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.02);
-    border-radius: 50px;
-    gap: 5px;
+.good-image {
+    width: 210px;
+    height: auto;
+    display: inline-block;
     overflow: hidden;
 }
 
+.good-image img {
+    width: 210px;
+    height: auto;
+}
+
+.text-block {
+    text-align: center;
+    overflow: hidden;
+    padding: 35px 20px 25px 20px;
+    margin: -55px 0 0 0;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.02);
+    x-border-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)) 30;
+    x-border-width: 2px;
+    x-border-style: solid;
+    border-radius: 50px;
+
+}
+
 .text-block h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .text-block p {
-    font-size: 16px;
+    margin-top: 5px;
+    text-align: justify;
+    font-size: 14px;
     font-weight: 200;
 }
