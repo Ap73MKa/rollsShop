@@ -4,231 +4,108 @@
     <meta charset="UTF-8">
     <title>Роллы & Суши</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="window">
-        <div class="app">
-            <div class="menu">
-                <div class="menu_inner">
-                    <a class="icon_block" href="#">
-                        <div class="selected">
-                            <img class="icon" src="assets/home.png" alt="">
-                        </div>
+    <div class="wrapper">
+        <div class="nav-bar">
+            <a class="icon-block" href="#">
+                <div class="selected circle shadow">
+                    <img class="icon" src="assets/home.png" alt="">
+                </div>
+            </a>
+            <a class="icon-block" href="#">
+                <img class="icon" src="assets/rolls.png" alt="">
+            </a>
+            <a class="icon-block" href="#">
+                <img class="icon" src="assets/sales.png" alt="">
+            </a>
+            <a class="icon-block" href="#">
+                <img class="icon" src="assets/settings.png" alt="">
+            </a>
+        </div>
+        <div class="container-wrapper shadow">
+            <div class="header">
+                <div class="logo">
+                    <img src="assets/rolls.png" alt="">
+                    <p>Суши & Роллы</p>
+                </div>
+                <div contenteditable="true" class="search-block shadow">Поиск</div>
+                <div class="icon-block circle shadow">
+                    <a href="#">
+                        <img class="icon" src="assets/check.png" alt="">
                     </a>
-                    <a class="icon_block" href="#">
-                        <img class="icon" src="assets/rolls.png" alt="">
-                    </a>
-                    <a class="icon_block" href="#">
-                        <img class="icon" src="assets/sales.png" alt="">
-                    </a>
-                    <a class="icon_block" href="#">
-                        <img class="icon" src="assets/settings.png" alt="">
+                </div>
+                <div class="icon-block circle shadow">
+                    <a href="#">
+                        <img class="icon" src="assets/avatar.png" alt="">
                     </a>
                 </div>
             </div>
-            <div class="main-block">
-                <div class="nav-bar">
-                    <div class="logo">
-                        <img src="assets/rolls.png" alt="">
-                        <p>Суши & Роллы</p>
+            <div class="container">
+                <p>Роллы</p>
+                <div class="product-list">
+                    <div class="product">
+                        <div class="image-block">
+                            <img src="assets/kalifornia.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="text-block">
+                                <p class="title">Калифорния</p>
+                                <p class="info">Ролл</p>
+                                <p class="price">299.00 ₽</p>
+                            </div>
+                        </div>
                     </div>
-                    <div contenteditable="true" class="search-block">Поиск</div>
-                    <div class="main-icons">
-                        <a href="#">
-                            <img class="main-icon" src="assets/check.png" alt="">
-                        </a>
+                    <div class="product">
+                        <div class="image-block">
+                            <img src="assets/kalifornia.png" alt="">
+                        </div>
+                        <div class="content shadow">
+                            <div class="text-block">
+                                <p class="title">Калифорния</p>
+                                <p class="info">Ролл</p>
+                                <p class="price">299.00 ₽</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="main-icons">
-                        <a href="#">
-                            <img class="main-icon" src="assets/avatar.png" alt="">
-                        </a>
+                    <div class="product">
+                        <div class="image-block">
+                            <img src="assets/kalifornia.png" alt="">
+                        </div>
+                        <div class="content shadow">
+                            <div class="text-block">
+                                <p class="title">Калифорния</p>
+                                <p class="info">Ролл</p>
+                                <p class="price">299.00 ₽</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="main-site">
-                    <p>Роллы</p>
-                    <div class="good-list">
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
+                    <div class="product">
+                        <div class="image-block">
+                            <img src="assets/kalifornia.png" alt="">
+                        </div>
+                        <div class="content shadow">
                             <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
+                                <p class="title">Калифорния</p>
+                                <p class="info">Ролл</p>
+                                <p class="price">299.00 ₽</p>
                             </div>
                         </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
+                    </div>
+                    <div class="product">
+                        <div class="image-block">
+                            <img src="assets/kalifornia.png" alt="">
                         </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
+                        <div class="content shadow">
                             <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
-                            </div>
-                        </div>
-                        <div class="good">
-                            <div class="good-image">
-                                <img src="assets/kalifornia.png" alt="">
-                            </div>
-                            <div class="text-block">
-                                <h2>Калифорния</h2>
-                                <h2>299.00 Р</h2>
-                                <p class="info-text">Снежный краб, икра лету-чей рыбы, авокадо, соус спайс, рис...</p>
+                                <p class="title">Калифорния</p>
+                                <p class="info">Ролл</p>
+                                <p class="price">299.00 ₽</p>
                             </div>
                         </div>
                     </div>
