@@ -14,18 +14,24 @@
     <div class="wrapper">
         <div class="nav-bar">
             <a class="icon-block" href="#">
-                <div class="selected circle shadow">
+                <div id="mark1" class="pre-selected selected" onclick="set_selected('mark1')">
                     <img class="icon" src="assets/home.svg" alt="">
                 </div>
             </a>
             <a class="icon-block" href="#">
-                <img class="icon" src="assets/sushi.svg" alt="">
+                <div id="mark2" class="pre-selected" onclick="set_selected('mark2')">
+                    <img class="icon" src="assets/sushi.svg" alt="">
+                </div>
             </a>
             <a class="icon-block" href="#">
-                <img class="icon" src="assets/sales.svg" alt="">
+                <div id="mark3" class="pre-selected" onclick="set_selected('mark3')">
+                    <img class="icon" src="assets/sales.svg" alt="">
+                </div>
             </a>
             <a class="icon-block" href="#">
-                <img class="icon" src="assets/settings.svg" alt="">
+                <div id="mark4" class="pre-selected" onclick="set_selected('mark4')">
+                    <img class="icon" src="assets/settings.svg" alt="">
+                </div>
             </a>
         </div>
         <div class="container-wrapper shadow">
@@ -39,9 +45,16 @@
                         <input type="text" placeholder="Поиск">
                     </label>
                 </div>
+                <div class="hidden">
+                    <div class="icon-block circle shadow">
+                        <a href="#">
+                            <img class="icon" src="assets/search.svg" alt="">
+                        </a>
+                    </div>
+                </div>
                 <div class="icon-block circle shadow">
                     <a href="#">
-                        <img class="icon" src="assets/cart.svg" alt="">
+                        <img class="icon" src="assets/cart.svg" alt="" onclick="unhide_cart()">
                     </a>
                 </div>
                 <div class="icon-block circle shadow">
@@ -312,5 +325,11 @@
             </div>
         </div>
     </div>
+    <div id="cart-wrapper" class="cart-wrapper shadow hidden">
+        <div class="cart-container">
+            <img class="icon" src="assets/close.svg" alt="" onclick="close_cart()">
+        </div>
+    </div>
 </body>
+<script src="/scripts/script.js"></script>
 </html>
