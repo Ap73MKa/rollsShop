@@ -89,7 +89,7 @@ body {
     border-radius: 30px 0 0 30px;
 }
 
-.container-wrapper .header {
+.header {
     width: 100%;
     max-height: 40px;
     display: flex;
@@ -99,45 +99,48 @@ body {
     gap: 2vw;
 }
 
-.container-wrapper .header .logo {
+.header .logo {
     display: flex;
     margin-right: auto;
     align-items: center;
     gap: 20px;
 }
 
-.container-wrapper .header .logo p {
+.header .logo p {
     white-space: nowrap;
     font-size: 24px;
     font-weight: 600;
     color: #000000;
 }
 
-.container-wrapper .header .logo img {
+.header .logo img {
     height: 32px;
     width: 32px;
 }
 
-.container-wrapper .header .search-block {
+.header .search-block {
     max-width: 400px;
     width: 75%;
     min-width: 200px;
     height: 40px;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
     padding: 0 30px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 40px;
 }
 
-.container-wrapper .header .search-block input {
-    margin: 10px 0;
+.header .search-block-inner {
+    width: 100%;
+}
+
+.header .search-block-inner input {
     width: 100%;
     font-size: 18px;
     color: #000000;
 }
 
-.container-wrapper .header .icon-block {
+.header .icon-block {
     height: 40px;
     width: 40px;
     display: flex;
@@ -148,11 +151,11 @@ body {
     transition: ease .2s;
 }
 
-.container-wrapper .header .icon-block:hover {
+.header .icon-block:hover {
     transform: scale(1.2);
 }
 
-.container-wrapper .header .icon-block .icon {
+.header .icon-block .icon {
     padding-top: 2px;
     max-height: 26px;
 }
@@ -285,7 +288,9 @@ body {
     top: 50%;
     left: 50%;
     display: flex;
+    flex-direction: column;
     position: fixed;
+    overflow-y: auto;
     transform: translate(-50%, -50%);
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -293,28 +298,132 @@ body {
     animation: cart-animation .4s ease;
 }
 
-
 @keyframes cart-animation {
     0% { opacity: 0; }
     100% { opacity: 100%; }
 }
 
+.cart-header {
+    width: 500px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-.cart-container .icon {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding-right: 20px;
-    padding-top: 20px;
-    height: 40px;
-    width: auto;
-    overflow-x: scroll;
+.cart-header p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cart-header .close-block {
+    height: 100%;
     cursor: pointer;
 }
 
-.cart-container .header {
+.cart-header .close-block img {
+    height: 100%;
+    width: auto;
+}
+
+.cart-table {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 500px;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cart-row {
+    display: flex;
     width: 100%;
-    margin: 20px;
+}
+
+.cart-td:first-child {
+    width: 95px;
+}
+
+.cart-td:nth-child(2) {
+    width: 175px;
+}
+
+.cart-td:nth-child(3) {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-td:nth-child(4) {
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-td:nth-child(5) {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.cart-td:nth-child(4) p {
+    font-size: 16px;
+}
+
+.cart-img {
+    width: 100%;
+}
+
+.cart-img img {
+    width: 100%;
+    height: auto;
+}
+
+.cart-text {
+    padding-top: 10px;
+    padding-left: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-text h1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cart-text h2 {
+    font-size: 16px;
+    font-weight: 200;
+    color: #505050;
+}
+
+.cart-count-box {
+    display: flex;
+    width: 70px;
+    justify-content: space-around;
+    height: 20px;
+}
+
+.cart-count-box img {
+    height: 100%;
+    width: auto;
+}
+
+.cart-remove {
+    width: 16px;
+    height: 16px;
+}
+
+.cart-remove img {
+    width: 100%;
+    height: auto;
 }
 
 .circle {
@@ -381,6 +490,16 @@ body {
 }
 
 @media (max-width: 660px) {
+    .cart-header {
+        width: 400px;
+    }
+    .cart-container {
+        width: 500px;
+    }
+    .cart-td:nth-child(2) {
+        width: 130px;
+    }
+
     .container {
         padding: 0 40px;
     }
