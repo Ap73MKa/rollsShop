@@ -69,6 +69,10 @@ body {
 }
 
 .selected {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.02);
 }
@@ -123,7 +127,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: left;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 64px;
 }
 
@@ -139,7 +143,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.5);
     transition: ease .2s;
 }
 
@@ -178,10 +182,9 @@ body {
 
 .product {
     width: 240px;
-    height: 270px;
-    overflow: auto;
+    height: 240px;
+    overflow: visible;
     display: inline-block;
-    justify-items: center;
     text-align: center;
     cursor: pointer;
     transition: ease .2s;
@@ -281,7 +284,8 @@ body {
     position: fixed;
     transform: translate(-50%, -50%);
     border-radius: 30px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
     animation: cart-animation .4s ease;
 }
 
@@ -295,8 +299,9 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    padding: 15px;
-    height: 60px;
+    padding-right: 20px;
+    padding-top: 20px;
+    height: 40px;
     width: auto;
     overflow-x: scroll;
     cursor: pointer;
@@ -307,11 +312,18 @@ body {
 }
 
 .shadow {
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
 }
 
 .hidden {
     display: none;
+}
+
+.border {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 @media (max-width: 1620px) {
