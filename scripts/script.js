@@ -28,25 +28,25 @@ let productList = [
         'name': 'Калифорния',
         'content': 'Ролл',
         'img': 'assets/california.png',
-        'price': '279.00 ₽'
+        'price': 279
     },
     {
         'name': 'Филадельфия',
         'content': 'Ролл',
         'img': 'assets/philadelphia.png',
-        'price': '359.00 ₽'
+        'price': 359
     },
     {
         'name': 'Бонито',
         'content': 'Ролл',
         'img': 'assets/bonito.png',
-        'price': '299.00 ₽'
+        'price': 299
     },
     {
         'name': 'Ями',
         'content': 'Ролл',
         'img': 'assets/yami.png',
-        'price': '239.00 ₽'
+        'price': 239
     },
 ]
 
@@ -68,10 +68,11 @@ productList.forEach ((item) => {
                     <p class="title">${item.name}</p>
                     <p class="info">${item.content}</p>
                     <div class="price-block">
-                        <p>${item.price}</p>
-                        <a href="#">
+                        <p>${item.price}.00 ₽</p>
+                        <div data-name="${item.name}" data-img="${item.img}"
+                         data-content="${item.content}" data-price="${item.price}" class="add-to-cart">
                             <img src="assets/plus.svg" alt="">
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
