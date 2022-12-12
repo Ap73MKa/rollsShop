@@ -1,4 +1,8 @@
-new Swiper('.image-slider', {
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 2,
+    centeredSlides: true,
+
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
@@ -8,10 +12,4 @@ new Swiper('.image-slider', {
         el: '.swiper-pagination',
         clickable: true
     },
-    slidesPerView: 2.8,
-    spaceBetween: 30,
-    initialSlide: 2,
-    centeredSlides: true,
-    centeredSlidesBounds: true,
-    loop: true
 });
