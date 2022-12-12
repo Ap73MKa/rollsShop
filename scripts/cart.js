@@ -1,4 +1,4 @@
-var shoppingCart = (function() {
+let shoppingCart = (function() {
     cart = [];
 
     function Item(name, content, price, img, count) {
@@ -59,7 +59,7 @@ var shoppingCart = (function() {
     }
 
     obj.removeItemFromCartAll = function(name) {
-        for(var item in cart) {
+        for(let item in cart) {
             if(cart[item].name === name) {
                 cart.splice(item, 1);
                 break;
@@ -74,8 +74,8 @@ var shoppingCart = (function() {
     }
 
     obj.totalCount = function() {
-        var totalCount = 0;
-        for(var item in cart) {
+        let totalCount = 0;
+        for(let item in cart) {
             totalCount += cart[item].count;
         }
         return totalCount;
@@ -118,6 +118,18 @@ $('.clear-cart').click(function() {
     displayCart();
 });
 
+$('.show-cart').on("click", ".minus-item", function(event) {
+    var name = $(this).data('name')
+    shoppingCart.removeItemFromCart(name);
+    displayCart();
+})
+
+$('.show-cart').on("click", ".plus-item", function(event) {
+    let name = $(this).data('name')
+    shoppingCart.addItemToCart(name);
+    displayCart();
+})
+
 function displayCart() {
     let cartArray = shoppingCart.listCart();
     let output = "";
@@ -137,25 +149,24 @@ function displayCart() {
                         </div>
                     </div>
                     <div class="cart-td">
-                        <div class="cart-count-box">
-                            <img src="assets/minus.svg" alt="">
+                        <div class="cart-count">
+                            <div class="cart-count-blocks minus-item" data-name="${cartArray[i].name}">
+                                <img src="assets/minus.svg" alt="">
+                            </div>
                             <p>${cartArray[i].count}</p>
-                            <img src="assets/plus2.svg" alt="">
+                            <div class="cart-count-blocks plus-item" data-name="${cartArray[i].name}">
+                               <img src="assets/plus2.svg" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="cart-td">
                         <p>${cartArray[i].total}.00 ₽</p>
                     </div>
-                    <div class="cart-td">
-                        <div class="cart-remove">
-                            <img src="assets/close.svg" alt="">
-                        </div>
-                    </div>
                 </div>
             `
     });
     $('.show-cart').html(output);
-    let cartPrice = shoppingCart.totalCart() + ".00 ₽";
-    console.log(cartPrice);
-    $('.total-cart').html(cartPrice);
+    $('.total-cart').html(shoppingCart.totalCart() + ".00 ₽");
 }
+
+displayCart();

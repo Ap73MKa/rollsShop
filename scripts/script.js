@@ -12,6 +12,21 @@ function unhide_cart() {
     document.getElementById("cart-wrapper").classList.remove("hidden");
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape')
+        close_cart()
+});
+
+function change_cart() {
+    document.getElementById("cart-icon").animate([
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.2)' },
+        { transform: 'scale(1)' },
+    ], {
+        duration: 200,
+    });
+}
+
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
     while (currentIndex !== 0) {
@@ -69,9 +84,10 @@ productList.forEach ((item) => {
                     <p class="info">${item.content}</p>
                     <div class="price-block">
                         <p>${item.price}.00 ₽</p>
-                        <div data-name="${item.name}" data-img="${item.img}"
-                         data-content="${item.content}" data-price="${item.price}" class="add-to-cart">
-                            <img src="assets/plus.svg" alt="">
+                        <div onclick="change_cart()" class="add-to-cart product-add-image"
+                         data-name="${item.name}" data-img="${item.img}"
+                         data-content="${item.content}" data-price="${item.price}">
+                            <img src="assets/plus2.svg" alt="">
                         </div>
                     </div>
                 </div>

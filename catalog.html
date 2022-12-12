@@ -7,7 +7,6 @@
     <link rel="icon" href="assets/sushi.svg" >
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -16,12 +15,12 @@
     <div class="wrapper">
         <div class="nav-bar">
             <a class="icon-block" href="index.html">
-                <div id="mark1" class="pre-selected selected" onclick="set_selected('mark1')">
+                <div id="mark1" class="pre-selected" onclick="set_selected('mark1')">
                     <img class="icon" src="assets/home.svg" alt="">
                 </div>
             </a>
             <a class="icon-block" href="catalog.html">
-                <div id="mark2" class="pre-selected" onclick="set_selected('mark2')">
+                <div id="mark2" class="pre-selected selected" onclick="set_selected('mark2')">
                     <img class="icon" src="assets/sushi.svg" alt="">
                 </div>
             </a>
@@ -57,48 +56,14 @@
                     </div>
                 </div>
                 <div id="cart-icon" class="icon-block border circle shadow" onclick="unhide_cart()">
-                    <img class="icon" src="assets/cart.svg" alt="">
+                        <img class="icon" src="assets/cart.svg" alt="">
                 </div>
                 <div class="icon-block border circle shadow">
                     <img class="icon" src="assets/avatar.svg" alt="">
                 </div>
             </div>
             <div class="container">
-                <div class="image-slider">
-                    <div class="image-slider__container swiper-container">
-                        <div class="image-slider__wrapper swiper-wrapper">
-                            <div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image">
-                                    <img src="assets/card1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image">
-                                    <img src="assets/card1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image">
-                                    <img src="assets/card1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image">
-                                    <img src="assets/card1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="image-slider__slide swiper-slide">
-                                <div class="image-slider__image">
-                                    <img src="assets/card1.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-                <p>Новинки</p>
+                <p>Роллы</p>
                 <div class="product-list" id="out"></div>
             </div>
         </div>
@@ -131,8 +96,6 @@
             </div>
         </div>
     </div>
-    <script src="scripts/swiper-bundle.min.js"></script>
-    <script src="scripts/swiper.js"></script>
     <script src="scripts/jquery.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/cart.js"></script>
