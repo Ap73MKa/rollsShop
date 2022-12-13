@@ -1,4 +1,7 @@
-const swiper = new Swiper('.swiper', {
+import Swiper from "/swiper";
+import '/swiper/css';
+
+new Swiper('.swiper', {
     loop: true,
     slidesPerView: 'auto',
     centeredSlides: true,

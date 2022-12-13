@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    animation: menu-animation 1.6s ease;
+    animation: menu-animation 0.8s ease;
 }
 
 @keyframes menu-animation {
@@ -537,6 +537,30 @@ body {
 
 .swiper-button-prev {
     left: 250px;
+}
+
+.sale-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+    gap: 20px;
+}
+
+.sale-item {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.sale-image {
+    width: 30vw;
+}
+
+.sale-image img {
+    width: 100%;
 }
 
 .circle {
