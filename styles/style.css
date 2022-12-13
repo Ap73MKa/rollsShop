@@ -532,11 +532,11 @@ body {
 }
 
 .swiper-button-next {
-    right: 10vw;
+    right: calc((72vw - 90px - 660px)/2);
 }
 
 .swiper-button-prev {
-    left: 250px;
+    left: calc((72vw - 90px - 660px)/2);
 }
 
 .sale-container {
