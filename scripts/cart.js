@@ -95,78 +95,84 @@ let shoppingCart = (function() {
             for(let p in item) { itemCopy[p] = item[p]; }
             itemCopy.total = Number(item.price * item.count);
             cartCopy.push(itemCopy);
-            console.log(itemCopy.total);
         }
         return cartCopy;
     }
     return obj;
 })();
 
+function displayCart() {
+    let cartArray = shoppingCart.listCart();
+    let output = "";
+    if (cartArray.length === 0)
+        output = "Корзина пуста";
+    else
+        cartArray.forEach(item => {
+            output +=
+                `
+                <div class="cart-row">
+                        <div class="cart-td">
+                            <div class="cart-img-block">
+                                <img src="${item.img}" alt="">
+                            </div>
+                        </div>
+                        <div class="cart-td">
+                            <div class="cart-text">
+                                <h1>${item.name}</h1>
+                                <h2>${item.content}</h2>
+                            </div>
+                        </div>
+                        <div class="cart-td">
+                            <div class="cart-count">
+                                <div class="cart-count-blocks">
+                                    <img src="assets/minus.svg" id="minus-item" data-name="${item.name}" alt="">
+                                </div>
+                                <p>${item.count}</p>
+                                <div class="cart-count-blocks">
+                                   <img src="assets/plus2.svg" id="plus-item" data-name="${item.name}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-td">
+                            <p>${item.total}.00 ₽</p>
+                        </div>
+                    </div>
+                `
+        });
+    document.querySelector('.show-cart').innerHTML = output;
+    document.querySelector('.total-cart').innerHTML = shoppingCart.totalCart() + ".00 ₽";
+}
 
-$('.add-to-cart').click(function(event) {
-    event.preventDefault();
-    let name = $(this).data('name');
-    let price = Number($(this).data('price'));
-    let img = $(this).data('img');
-    let content = $(this).data('content');
-    shoppingCart.addItemToCart(name, content, price, img, 1);
-    displayCart();
+document.querySelectorAll('.add-to-cart').forEach((element) => {
+    element.addEventListener('click', function(event) {
+        event.preventDefault();
+        const data = {
+            name: this.dataset.name,
+            price: this.dataset.price,
+            img: this.dataset.img,
+            content: this.dataset.content,
+        };
+        shoppingCart.addItemToCart(data['name'], data['content'], data['price'], data['img'], 1);
+        displayCart();
+    });
 });
 
-$('.clear-cart').click(function() {
+document.querySelector('.clear-cart').addEventListener('click', () => {
     shoppingCart.clearCart();
     displayCart();
 });
 
-$('.show-cart').on("click", ".minus-item", function(event) {
-    var name = $(this).data('name')
-    shoppingCart.removeItemFromCart(name);
-    displayCart();
-})
+let cart_block = document.querySelector('.show-cart');
+cart_block.addEventListener('click', function(event) {
+    if (event.target.id === 'minus-item') {
+        shoppingCart.removeItemFromCart(event.target.dataset.name);
+        displayCart();
+    }
 
-$('.show-cart').on("click", ".plus-item", function(event) {
-    let name = $(this).data('name')
-    shoppingCart.addItemToCart(name);
-    displayCart();
+    if (event.target.id === 'plus-item') {
+        shoppingCart.addItemToCart(event.target.dataset.name);
+        displayCart();
+    }
 })
-
-function displayCart() {
-    let cartArray = shoppingCart.listCart();
-    let output = "";
-    $.each(cartArray, function (i) {
-        output +=
-            `
-            <div class="cart-row">
-                    <div class="cart-td">
-                        <div class="cart-img-block">
-                            <img src="${cartArray[i].img}" alt="">
-                        </div>
-                    </div>
-                    <div class="cart-td">
-                        <div class="cart-text">
-                            <h1>${cartArray[i].name}</h1>
-                            <h2>${cartArray[i].content}</h2>
-                        </div>
-                    </div>
-                    <div class="cart-td">
-                        <div class="cart-count">
-                            <div class="cart-count-blocks minus-item" data-name="${cartArray[i].name}">
-                                <img src="assets/minus.svg" alt="">
-                            </div>
-                            <p>${cartArray[i].count}</p>
-                            <div class="cart-count-blocks plus-item" data-name="${cartArray[i].name}">
-                               <img src="assets/plus2.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-td">
-                        <p>${cartArray[i].total}.00 ₽</p>
-                    </div>
-                </div>
-            `
-    });
-    $('.show-cart').html(output);
-    $('.total-cart').html(shoppingCart.totalCart() + ".00 ₽");
-}
 
 displayCart();

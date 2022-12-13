@@ -69,8 +69,6 @@ productList = productList.flatMap(i => Array(5).fill(i));
 shuffle(productList);
 
 let cardItem = ''
-let out = document.getElementById('out')
-
 productList.forEach ((item) => {
     cardItem +=
         `
@@ -95,4 +93,5 @@ productList.forEach ((item) => {
         </div>
         `
 })
-out.insertAdjacentHTML('afterbegin', cardItem);
+
+document.getElementById('out').insertAdjacentHTML('afterbegin', cardItem);

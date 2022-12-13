@@ -296,6 +296,7 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
+    z-index: 1;
 }
 
 .cart-container {
@@ -481,57 +482,62 @@ body {
     text-shadow: rgba(0, 0, 0, 0.1) 0 0 4px;
 }
 
-.image-slider__container {
-    display: flex;
-    position: relative;
-    width: 1045px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: calc(-5vw + 80px);
-    height: 300px;
-    justify-content: space-between;
-
-}
-
-.image-slider__image {
-    border-radius: 20px;
-    width: 500px;
-}
-
-.image-slider__image img {
-    width: 100%;
-}
-
 .swiper-container {
+    position: relative;
+    width: 100%;
+    height: 215px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    position: relative;
+    width: calc(75vw - 90px);
+    height: 215px;
     overflow: hidden;
 }
 
-.swiper-pagination {
-    text-align: center;
-    top: 190px;
+.swiper-slide {
+    position: relative;
+    width: 600px;
+    opacity: 0.8;
+    filter: blur(2px);
+    transform: scale(.8);
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    color: white;
-    text-shadow: 0 0 4px black;
+.swiper-slide.swiper-slide-active {
+    filter: inherit;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.swiper-image {
+    position: relative;
+    width: 100%;
+}
+
+.swiper-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-button-next {
-    right: 200px;
+    right: 10vw;
 }
 
 .swiper-button-prev {
-    left: 200px;
+    left: 250px;
 }
-
-.swiper-slide-prev, .swiper-slide-next {
-    filter: blur(2px);
-    z-index: 0;
-}
-
-.swiper-slide-active {
-    z-index: 1;
- }
 
 .circle {
     border-radius: 50px;
@@ -576,6 +582,15 @@ body {
     .product-list {
         grid-template-columns: 1fr 1fr;
     }
+
+    .swiper {
+        height: 20vw;
+    }
+
+    .swiper-slide {
+        height: 20vw;
+        width: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -597,6 +612,15 @@ body {
 
     .product-list {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .swiper {
+        height: 20vw;
+    }
+
+    .swiper-slide {
+        width: auto;
+        height: 20vw;
     }
 }
 
@@ -664,5 +688,9 @@ body {
 
     .product-list {
         grid-template-columns: 1fr;
+    }
+
+    .swiper {
+        display: none;
     }
 }
