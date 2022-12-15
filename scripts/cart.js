@@ -1,9 +1,9 @@
 let shoppingCart = (function() {
     cart = [];
 
-    function Item(name, content, price, img, count) {
+    function Item(name, type, price, img, count) {
         this.name = name;
-        this.content = content;
+        this.type = type;
         this.img = img;
         this.price = price;
         this.count = count;
@@ -23,7 +23,7 @@ let shoppingCart = (function() {
 
     let obj = {};
 
-    obj.addItemToCart = function(name, content, price, img, count) {
+    obj.addItemToCart = function(name, type, price, img, count) {
         for(let item in cart) {
             if(cart[item].name === name) {
                 cart[item].count ++;
@@ -31,7 +31,7 @@ let shoppingCart = (function() {
                 return;
             }
         }
-        let item = new Item(name, content, price, img, count);
+        let item = new Item(name, type, price, img, count);
         cart.push(item);
         saveCart();
     }
@@ -119,7 +119,7 @@ function displayCart() {
                         <div class="cart-td">
                             <div class="cart-text">
                                 <h1>${item.name}</h1>
-                                <h2>${item.content}</h2>
+                                <h2>${item.type}</h2>
                             </div>
                         </div>
                         <div class="cart-td">
@@ -141,13 +141,15 @@ function displayCart() {
         });
     document.querySelector('.show-cart').innerHTML = output;
     document.querySelector('.total-cart').innerHTML = shoppingCart.totalCart() + ".00 ₽";
-    document.getElementById('product-counter').innerHTML = shoppingCart.totalCount();
-}
-
-function set_selected(el_id) {
-    let list = document.getElementsByClassName('selected');
-    Array.from(list).forEach((elem) => { elem.classList.remove('selected'); });
-    document.getElementById(el_id).classList.add("selected")
+    let productCount = shoppingCart.totalCount();
+    let counter = document.getElementById('product-counter');
+    if (productCount <= 0)
+        counter.style.display = 'None';
+    else
+    {
+        counter.style.display = 'block';
+        counter.innerHTML = '' + productCount;
+    }
 }
 
 document.getElementById('cart-icon').addEventListener('click', () => {
@@ -164,7 +166,7 @@ document.querySelectorAll('.add-to-cart').forEach((element) => {
         event.preventDefault();
 
         // Animate cart icon
-        document.getElementById("cart-icon").animate([
+        document.getElementById('cart-icon').animate([
             { transform: 'scale(1)' },
             { transform: 'scale(1.2)' },
             { transform: 'scale(1)' },
@@ -177,9 +179,9 @@ document.querySelectorAll('.add-to-cart').forEach((element) => {
             name: this.dataset.name,
             price: this.dataset.price,
             img: this.dataset.img,
-            content: this.dataset.content,
+            type: this.dataset.type,
         };
-        shoppingCart.addItemToCart(data['name'], data['content'], data['price'], data['img'], 1);
+        shoppingCart.addItemToCart(data['name'], data['type'], data['price'], data['img'], 1);
         displayCart();
     });
 });

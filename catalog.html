@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Мир Ролл</title>
+    <title>Планета Ролл - Каталог</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/sushi.svg" >
+    <link rel="icon" href="assets/logo_main1.png">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,23 +13,23 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="nav-bar">
-            <a class="icon-block" href="index.html">
+        <div class="nav-bar" id="nav-bar">
+            <a class="icon-block" href="index.html" title="Главная страница">
                 <div id="mark1" class="pre-selected" onclick="set_selected('mark1')">
                     <img class="icon" src="assets/home.svg" alt="">
                 </div>
             </a>
-            <a class="icon-block" href="catalog.html">
+            <a class="icon-block" href="catalog.html" title="Каталог">
                 <div id="mark2" class="pre-selected selected" onclick="set_selected('mark2')">
                     <img class="icon" src="assets/sushi.svg" alt="">
                 </div>
             </a>
-            <a class="icon-block" href="sales.html">
+            <a class="icon-block" href="sales.html" title="Акции">
                 <div id="mark3" class="pre-selected" onclick="set_selected('mark3')">
                     <img class="icon" src="assets/sales.svg" alt="">
                 </div>
             </a>
-            <a class="icon-block" href="support.html">
+            <a class="icon-block" href="support.html" title="Поддержка">
                 <div id="mark4" class="pre-selected" onclick="set_selected('mark4')">
                     <img class="icon" src="assets/settings.svg" alt="">
                 </div>
@@ -37,9 +37,12 @@
         </div>
         <div class="container-wrapper border">
             <div class="header">
+                <div class="header-icon menu-icon" id="menu-icon">
+                    <img src="assets/menu.svg" alt="" style="padding: 4px 0 4px 0;">
+                </div>
                 <div class="header-logo">
-                    <img src="assets/sushi.svg" alt="">
-                    <p>Мир Ролл</p>
+                    <img src="assets/logo.png" alt="">
+                    <p>Планета Ролл</p>
                 </div>
                 <div class="header-search border">
                     <div class="header-search-inner">
@@ -53,10 +56,8 @@
                         <img src="assets/search.svg" style="padding: 3px 0 3px 0;" alt="">
                     </div>
                 </div>
-                <div class="header-icon border" id="cart-icon" >
-                    <div class="header-counter border">
-                        <p id="product-counter">0</p>
-                    </div>
+                <div class="header-icon border" id="cart-icon">
+                    <div class="header-counter border" id="product-counter" style="display: none;">0</div>
                     <img src="assets/cart.svg" alt="" style="padding: 0 0 1px 0;">
                 </div>
                 <div class="header-icon border">
@@ -65,7 +66,11 @@
             </div>
             <div class="container">
                 <p class="container-title">Роллы</p>
-                <div class="product-list" id="product-out"></div>
+                <div class="product-list" id="product-roll-out"></div>
+                <p class="container-title">Маки роллы</p>
+                <div class="product-list" id="product-maki-out"></div>
+                <p class="container-title">Гунканы</p>
+                <div class="product-list" id="product-gunkan-out"></div>
             </div>
         </div>
     </div>
