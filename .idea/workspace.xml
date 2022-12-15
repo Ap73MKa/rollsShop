@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b1190dbe-20c5-4ac7-84aa-205723c2d50a" name="Changes" comment="REMOVE: jquery&#10;FIX: swiper, start to adaptive slider">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales.html" beforeDir="false" afterPath="$PROJECT_DIR$/sales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/support.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IJd8Sx84ogZpnwIpy8qjaFycve" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ap73MKa\IdeaProjects\rollsShop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ap73MKa\IdeaProjects\rollsShop" />
+      <recent name="C:\Users\Ap73MKa\IdeaProjects\rollsShop\htmls" />
+      <recent name="C:\Users\Ap73MKa\IdeaProjects\rollsShop\scripts" />
+      <recent name="C:\Users\Ap73MKa\IdeaProjects\rollsShop\assets" />
+      <recent name="C:\Users\Ap73MKa\IdeaProjects\rollsShop\styles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="rollsShop" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="rollsShop" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b1190dbe-20c5-4ac7-84aa-205723c2d50a" name="Changes" comment="" />
+      <created>1669903462923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669903462923</updated>
+      <workItem from="1669903464035" duration="13112000" />
+      <workItem from="1669950991112" duration="1376000" />
+      <workItem from="1669977394121" duration="11441000" />
+      <workItem from="1670047525136" duration="2957000" />
+      <workItem from="1670214556560" duration="206000" />
+      <workItem from="1670246669857" duration="7293000" />
+      <workItem from="1670303963027" duration="4950000" />
+      <workItem from="1670332594976" duration="433000" />
+      <workItem from="1670333322502" duration="21001000" />
+      <workItem from="1670359968136" duration="156000" />
+      <workItem from="1670391781828" duration="7208000" />
+      <workItem from="1670411159240" duration="5285000" />
+      <workItem from="1670423157785" duration="8405000" />
+      <workItem from="1670497966893" duration="286000" />
+      <workItem from="1670509096753" duration="464000" />
+      <workItem from="1670577217859" duration="9161000" />
+      <workItem from="1670768028011" duration="939000" />
+      <workItem from="1670821432224" duration="4449000" />
+      <workItem from="1670856315690" duration="5318000" />
+      <workItem from="1670907323545" duration="6931000" />
+      <workItem from="1670935986978" duration="2153000" />
+      <workItem from="1670938198621" duration="180000" />
+      <workItem from="1670938573533" duration="185000" />
+      <workItem from="1670940074771" duration="36000" />
+      <workItem from="1670940133733" duration="2811000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1669963275171</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669963275171</updated>
+    </task>
+    <task id="LOCAL-00002" summary="UPDATE: more adaptive futures">
+      <created>1670214620633</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670214620633</updated>
+    </task>
+    <task id="LOCAL-00003" summary="FIX: remove unused code and short code&#10;UPDATE: animated gradient background&#10;ADD: reset.css">
+      <created>1670309577917</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670309577917</updated>
+    </task>
+    <task id="LOCAL-00004" summary="UPDATE: change all icons to svg&#10;ADD: some animations">
+      <created>1670350647100</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670350647100</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ADD: svg icons">
+      <created>1670350689908</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670350689908</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ADD: close icon, base of cart&#10;UPDATE: some adaptation for small screens&#10;FIX: hide scroll when there are small amount of products">
+      <created>1670360071599</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670360071599</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ADD: border effect&#10;UPDATE: blur for some div, change close button">
+      <created>1670400556411</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670400556411</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ADD: cart table">
+      <created>1670440118967</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670440118967</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ADD: start swiper slider">
+      <created>1670826385307</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670826385307</updated>
+    </task>
+    <task id="LOCAL-00010" summary="REMOVE: jquery&#10;FIX: swiper, start to adaptive slider">
+      <created>1670914267024</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670914267024</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="UPDATE: more adaptive futures" />
+    <MESSAGE value="FIX: remove unused code and short code&#10;UPDATE: animated gradient background&#10;ADD: reset.css" />
+    <MESSAGE value="UPDATE: change all icons to svg&#10;ADD: some animations" />
+    <MESSAGE value="ADD: svg icons" />
+    <MESSAGE value="ADD: close icon, base of cart&#10;UPDATE: some adaptation for small screens&#10;FIX: hide scroll when there are small amount of products" />
+    <MESSAGE value="ADD: border effect&#10;UPDATE: blur for some div, change close button" />
+    <MESSAGE value="ADD: cart table" />
+    <MESSAGE value="ADD: start swiper slider" />
+    <MESSAGE value="REMOVE: jquery&#10;FIX: swiper, start to adaptive slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="REMOVE: jquery&#10;FIX: swiper, start to adaptive slider" />
+  </component>
+</project>
