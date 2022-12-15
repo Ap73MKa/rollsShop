@@ -143,6 +143,35 @@ function displayCart() {
     document.querySelector('.total-cart').innerHTML = shoppingCart.totalCart() + ".00 ₽";
 }
 
+function set_selected(el_id) {
+    let list = document.getElementsByClassName('selected');
+    Array.from(list).forEach((elem) => { elem.classList.remove('selected'); });
+    document.getElementById(el_id).classList.add("selected")
+}
+
+function close_cart() {
+    document.getElementById('cart-wrapper').classList.add("hidden");
+}
+
+function unhide_cart() {
+    document.getElementById('cart-wrapper').classList.remove("hidden");
+}
+
+function change_cart() {
+    document.getElementById("cart-icon").animate([
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.2)' },
+        { transform: 'scale(1)' },
+    ], {
+        duration: 200,
+    });
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape')
+        close_cart()
+});
+
 document.querySelectorAll('.add-to-cart').forEach((element) => {
     element.addEventListener('click', function(event) {
         event.preventDefault();
