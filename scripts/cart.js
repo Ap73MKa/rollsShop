@@ -112,7 +112,7 @@ function displayCart() {
                 `
                 <div class="cart-row">
                         <div class="cart-td">
-                            <div class="cart-img-block">
+                            <div class="cart-image">
                                 <img src="${item.img}" alt="">
                             </div>
                         </div>
@@ -141,6 +141,7 @@ function displayCart() {
         });
     document.querySelector('.show-cart').innerHTML = output;
     document.querySelector('.total-cart').innerHTML = shoppingCart.totalCart() + ".00 ₽";
+    document.getElementById('product-counter').innerHTML = shoppingCart.totalCount();
 }
 
 function set_selected(el_id) {
@@ -149,32 +150,29 @@ function set_selected(el_id) {
     document.getElementById(el_id).classList.add("selected")
 }
 
-function close_cart() {
-    document.getElementById('cart-wrapper').classList.add("hidden");
-}
-
-function unhide_cart() {
+document.getElementById('cart-icon').addEventListener('click', () => {
     document.getElementById('cart-wrapper').classList.remove("hidden");
-}
-
-function change_cart() {
-    document.getElementById("cart-icon").animate([
-        { transform: 'scale(1)' },
-        { transform: 'scale(1.2)' },
-        { transform: 'scale(1)' },
-    ], {
-        duration: 200,
-    });
-}
+});
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape')
-        close_cart()
+        document.getElementById('cart-wrapper').classList.add("hidden");
 });
 
 document.querySelectorAll('.add-to-cart').forEach((element) => {
     element.addEventListener('click', function(event) {
         event.preventDefault();
+
+        // Animate cart icon
+        document.getElementById("cart-icon").animate([
+            { transform: 'scale(1)' },
+            { transform: 'scale(1.2)' },
+            { transform: 'scale(1)' },
+        ], {
+            duration: 200,
+        });
+
+        // Add new product
         const data = {
             name: this.dataset.name,
             price: this.dataset.price,
@@ -191,14 +189,17 @@ document.querySelector('.clear-cart').addEventListener('click', () => {
     displayCart();
 });
 
-let cart_block = document.querySelector('.show-cart');
-cart_block.addEventListener('click', function(event) {
+document.getElementById('close-cart').addEventListener('click', () => {
+    document.getElementById('cart-wrapper').classList.add("hidden");
+})
+
+document.querySelector('.show-cart').addEventListener('click', function(event) {
     if (event.target.id === 'minus-item') {
         shoppingCart.removeItemFromCart(event.target.dataset.name);
         displayCart();
     }
 
-    if (event.target.id === 'plus-item') {
+    else if (event.target.id === 'plus-item') {
         shoppingCart.addItemToCart(event.target.dataset.name);
         displayCart();
     }

@@ -35,51 +35,52 @@
                 </div>
             </a>
         </div>
-        <div class="container-wrapper shadow border">
+        <div class="container-wrapper border">
             <div class="header">
-                <div class="logo">
+                <div class="header-logo">
                     <img src="assets/sushi.svg" alt="">
                     <p>Мир Ролл</p>
                 </div>
-                <div class="search-block border shadow">
-                    <div class="search-block-inner">
+                <div class="header-search border">
+                    <div class="header-search-inner">
                         <label>
                             <input type="text" placeholder="Поиск">
                         </label>
                     </div>
                 </div>
                 <div class="hidden">
-                    <div class="icon-block border circle shadow">
-                        <a href="#">
-                            <img class="icon" src="assets/search.svg" alt="">
-                        </a>
+                    <div class="header-icon border">
+                        <img src="assets/search.svg" style="padding: 3px 0 3px 0;" alt="">
                     </div>
                 </div>
-                <div id="cart-icon" class="icon-block border circle shadow" onclick="unhide_cart()">
-                    <img class="icon" src="assets/cart.svg" alt="">
+                <div class="header-icon border" id="cart-icon" >
+                    <div class="header-counter border">
+                        <p id="product-counter">0</p>
+                    </div>
+                    <img src="assets/cart.svg" alt="" style="padding: 0 0 1px 0;">
                 </div>
-                <div class="icon-block border circle shadow">
-                    <img class="icon" src="assets/avatar.svg" alt="">
+                <div class="header-icon border">
+                    <img src="assets/avatar.svg" alt="" style="padding: 0 0 2px 0;">
                 </div>
             </div>
             <div class="container no-margin">
-                <p>Поддержка</p>
+                <p class="container-title">Поддержка</p>
                 <form>
-                    <div class="text-field">
-                        <label for="feedback">Отзыв</label>
-                        <textarea id="feedback" class="text-textarea" rows="1"></textarea>
-                        <input type="submit">
+                    <div class="feedback-field">
+                        <label for="feedback-form"></label>
+                        <textarea id="feedback-form" class="feedback-textarea" placeholder="Напиши отзыв на данный сайт" rows="1"></textarea>
+                        <input class="feedback-btn border" type="submit" value="Отправить">
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <div id="cart-wrapper" class="cart-wrapper hidden">
-        <div class="cart-container shadow ">
+        <div class="cart-container">
             <div class="cart-header">
                 <p>Корзина</p>
-                <div class="close-block">
-                    <img class="icon" src="assets/close.svg" alt="" onclick="close_cart()">
+                <div class="cart-icon" id="close-cart">
+                    <img src="assets/close.svg" alt="">
                 </div>
             </div>
             <div class="cart-table show-cart"></div>
@@ -96,7 +97,7 @@
                 </div>
             </div>
             <div class="cart-btn-block clear-cart">
-                <div class="cart-btn shadow">
+                <div class="cart-btn">
                     <p>Оформить заказ</p>
                 </div>
             </div>

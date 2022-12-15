@@ -33,17 +33,16 @@ productArray.forEach ((item) => {
     productHTML +=
         `
         <div class="product">
-            <div class="image-block">
+            <div class="product-image">
                 <img src="${item.img}" alt="">
             </div>
-            <div class="content shadow border">
-                <div class="text-block">
-                    <p class="title">${item.name}</p>
-                    <p class="info">${item.content}</p>
-                    <div class="price-block">
+            <div class="product-content shadow border">
+                <div class="product-text">
+                    <p class="product-title">${item.name}</p>
+                    <p class="product-class">${item.content}</p>
+                    <div class="product-price">
                         <p>${item.price}.00 ₽</p>
-                        <div onclick="change_cart()" class="add-to-cart product-add-image"
-                         data-name="${item.name}" data-img="${item.img}"
+                        <div class="product-btn add-to-cart" data-name="${item.name}" data-img="${item.img}"
                          data-content="${item.content}" data-price="${item.price}">
                             <img src="assets/plus2.svg" alt="">
                         </div>
