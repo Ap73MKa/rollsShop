@@ -520,7 +520,6 @@ body {
 }
 
 .swiper-image img {
-    width: 100%;
     height: 100%;
 }
 
@@ -541,26 +540,57 @@ body {
 
 .sale-container {
     width: 100%;
-    display: flex;
+    display: grid;
+    margin: 20px 0;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     flex-direction: column;
-    margin: 0;
-    gap: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+}
+
+.sale-text {
+    text-align: center;
 }
 
 .sale-item {
-    width: 100%;
+    width: 30vw;
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    justify-content: space-between;
 }
 
 .sale-image {
-    width: 30vw;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
 }
 
 .sale-image img {
-    width: 100%;
+    height: 100%;
+}
+
+.text-field {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.text-textarea {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 400px;
+    height: 100px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    overflow-y: hidden;
+    vertical-align: middle;
+}
+
+.no-margin {
+    margin: 20px 0 !important;
 }
 
 .circle {
@@ -613,7 +643,20 @@ body {
 
     .swiper-slide {
         height: 20vw;
+        width: 50vw;
+    }
+
+    .swiper-image img {
         width: auto;
+        height: 100%;
+    }
+
+    .swiper-button-next {
+        right: 20px;
+    }
+
+    .swiper-button-prev {
+        left: 20px;
     }
 }
 
@@ -625,6 +668,7 @@ body {
     .nav-bar {
         display: none;
     }
+
     .header .logo {
         display: none;
     }
@@ -638,14 +682,10 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 
-    .swiper {
-        height: 20vw;
+    .sale-container {
+        grid-template-columns: 1fr;
     }
 
-    .swiper-slide {
-        width: auto;
-        height: 20vw;
-    }
 }
 
 @media (max-width: 660px) {
@@ -678,10 +718,6 @@ body {
 
     .product .image-block img {
         width: 100%;
-    }
-
-    .container-wrapper {
-        border-radius: 0;
     }
 
     .nav-bar {
