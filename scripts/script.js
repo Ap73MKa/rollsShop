@@ -18,7 +18,7 @@ function set_selected(el_id) {
 document.getElementById('menu-icon').addEventListener('click', () => {
    let nav = document.getElementById('nav-bar');
    if (nav.style.display === 'flex')
-       nav.style.display = 'None';
+       nav.style.display = 'none';
    else
        nav.style.display = 'flex';
 });

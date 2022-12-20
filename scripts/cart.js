@@ -144,10 +144,10 @@ function displayCart() {
     let productCount = shoppingCart.totalCount();
     let counter = document.getElementById('product-counter');
     if (productCount <= 0)
-        counter.style.display = 'None';
+        counter.style.display = 'none';
     else
     {
-        counter.style.display = 'block';
+        counter.style.display = 'flex';
         counter.innerHTML = '' + productCount;
     }
 }

@@ -236,8 +236,10 @@ body {
 }
 
 .header-counter {
+    display: flex;
     position: absolute;
     margin: 0 0 30px 30px;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
