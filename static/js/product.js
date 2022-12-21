@@ -34,67 +34,67 @@ let productArray = [
     {
         'name': 'Калифорния',
         'type': 'Ролл',
-        'img': 'assets/california.png',
+        'img': './static/assets/california.png',
         'price': 279
     },
     {
         'name': 'Филадельфия',
         'type': 'Ролл',
-        'img': 'assets/philadelphia.png',
+        'img': './static/assets/philadelphia.png',
         'price': 359
     },
     {
         'name': 'Бонито',
         'type': 'Ролл',
-        'img': 'assets/bonito.png',
+        'img': './static/assets/bonito.png',
         'price': 299
     },
     {
         'name': 'Ями',
         'type': 'Ролл',
-        'img': 'assets/yami.png',
+        'img': './static/assets/yami.png',
         'price': 239
     },
     {
         'name': 'Гункан с лососем',
         'type': 'Гункан',
-        'img': 'assets/gunkan_salmon.png',
+        'img': './static/assets/gunkan_salmon.png',
         'price': 89
     },
     {
         'name': 'Гункан с угрём',
         'type': 'Гункан',
-        'img': 'assets/gunkan_eel.png',
+        'img': './static/assets/gunkan_eel.png',
         'price': 79
     },
     {
         'name': 'Гункан с курицей',
         'type': 'Гункан',
-        'img': 'assets/gunkan_chicken.png',
+        'img': './static/assets/gunkan_chicken.png',
         'price': 74
     },
     {
         'name': 'Эби маки',
         'type': 'Маки ролл',
-        'img': 'assets/maki_abi.png',
+        'img': './static/assets/maki_abi.png',
         'price': 169
     },
     {
         'name': 'Сяки маки',
         'type': 'Маки ролл',
-        'img': 'assets/maki_saki.png',
+        'img': './static/assets/maki_saki.png',
         'price': 179
     },
     {
         'name': 'Унаги маки',
         'type': 'Маки ролл',
-        'img': 'assets/maki_unagi.png',
+        'img': './static/assets/maki_unagi.png',
         'price': 189
     },
     {
         'name': 'Маки с огурцом',
         'type': 'Маки ролл',
-        'img': 'assets/maki_cucu.png',
+        'img': './static/assets/maki_cucu.png',
         'price': 99
     },
 ];

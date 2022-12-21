@@ -1,10 +1,10 @@
 let saleArray = [
     {
-        'img': 'assets/card1.jpg',
+        'img': './static/assets/card1.jpg',
         'text': 'Акция. Ролл Калифорния за 279 рублей!'
     },
     {
-        'img': 'assets/card2.jpg',
+        'img': './static/assets/card2.jpg',
         'text': 'Акция. Новый ролл Ями всего за 239 рублей!'
     },
 ];

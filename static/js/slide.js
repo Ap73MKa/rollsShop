@@ -1,6 +1,6 @@
 let slideArray = [
-    { 'img': 'assets/card1.jpg', },
-    { 'img': 'assets/card2.jpg', },
+    { 'img': './static/assets/card1.jpg', },
+    { 'img': './static/assets/card2.jpg', },
 ];
 
 slideArray = slideArray.flatMap(i => Array(5).fill(i));
