@@ -18,7 +18,7 @@ function formProductHTML(productList) {
                         <p>${item.price}.00 ₽</p>
                         <div class="product-btn add-to-cart" data-name="${item.name}" data-img="${item.img}"
                          data-type="${item.type}" data-price="${item.price}">
-                            <img src="assets/plus2.svg" alt="">
+                            <span class="icon-plus"></span>
                         </div>
                     </div>
                 </div>

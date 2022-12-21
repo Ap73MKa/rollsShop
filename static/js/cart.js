@@ -125,11 +125,11 @@ function displayCart() {
                         <div class="cart-td">
                             <div class="cart-count">
                                 <div class="cart-count-blocks">
-                                    <img src="assets/minus.svg" id="minus-item" data-name="${item.name}" alt="">
+                                    <span class="icon-minus" id="minus-item" data-name="${item.name}"></span>
                                 </div>
                                 <p>${item.count}</p>
                                 <div class="cart-count-blocks">
-                                   <img src="assets/plus2.svg" id="plus-item" data-name="${item.name}" alt="">
+                                    <span class="icon-plus" id="plus-item" data-name="${item.name}"></span>
                                 </div>
                             </div>
                         </div>
