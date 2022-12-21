@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Планета Ролл - Каталог</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/logo_main1.png">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="static/assets/logo_main1.png">
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -16,32 +16,32 @@
         <div class="nav-bar" id="nav-bar">
             <a class="icon-block" href="index.html" title="Главная страница">
                 <div id="mark1" class="pre-selected" onclick="set_selected('mark1')">
-                    <img class="icon" src="assets/home.svg" alt="">
+                    <img class="icon" src="static/assets/home.svg" alt="">
                 </div>
             </a>
             <a class="icon-block" href="catalog.html" title="Каталог">
                 <div id="mark2" class="pre-selected selected" onclick="set_selected('mark2')">
-                    <img class="icon" src="assets/sushi.svg" alt="">
+                    <img class="icon" src="static/assets/sushi.svg" alt="">
                 </div>
             </a>
             <a class="icon-block" href="sales.html" title="Акции">
                 <div id="mark3" class="pre-selected" onclick="set_selected('mark3')">
-                    <img class="icon" src="assets/sales.svg" alt="">
+                    <img class="icon" src="static/assets/sales.svg" alt="">
                 </div>
             </a>
             <a class="icon-block" href="support.html" title="Поддержка">
                 <div id="mark4" class="pre-selected" onclick="set_selected('mark4')">
-                    <img class="icon" src="assets/settings.svg" alt="">
+                    <img class="icon" src="static/assets/settings.svg" alt="">
                 </div>
             </a>
         </div>
         <div class="container-wrapper border">
             <div class="header">
                 <div class="header-icon menu-icon" id="menu-icon">
-                    <img src="assets/menu.svg" alt="" style="padding: 4px 0 4px 0;">
+                    <img src="static/assets/menu.svg" alt="" style="padding: 4px 0 4px 0;">
                 </div>
                 <div class="header-logo">
-                    <img src="assets/logo.png" alt="">
+                    <img src="static/assets/logo.png" alt="">
                     <p>Планета Ролл</p>
                 </div>
                 <div class="header-search border">
@@ -53,15 +53,15 @@
                 </div>
                 <div class="hidden">
                     <div class="header-icon border">
-                        <img src="assets/search.svg" style="padding: 3px 0 3px 0;" alt="">
+                        <img src="static/assets/search.svg" style="padding: 3px 0 3px 0;" alt="">
                     </div>
                 </div>
                 <div class="header-icon border" id="cart-icon">
                     <div class="header-counter border" id="product-counter" style="display: none;">0</div>
-                    <img src="assets/cart.svg" alt="" style="padding: 0 0 1px 0;">
+                    <img src="static/assets/cart.svg" alt="" style="padding: 0 0 1px 0;">
                 </div>
                 <div class="header-icon border">
-                    <img src="assets/avatar.svg" alt="" style="padding: 0 0 2px 0;">
+                    <img src="static/assets/avatar.svg" alt="" style="padding: 0 0 2px 0;">
                 </div>
             </div>
             <div class="container">
@@ -79,7 +79,7 @@
             <div class="cart-header">
                 <p>Корзина</p>
                 <div class="cart-icon" id="close-cart">
-                    <img src="assets/close.svg" alt="">
+                    <img src="static/assets/close.svg" alt="">
                 </div>
             </div>
             <div class="cart-table show-cart"></div>
@@ -102,8 +102,8 @@
             </div>
         </div>
     </div>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/product.js"></script>
-    <script src="scripts/cart.js"></script>
+    <script src="static/js/script.js"></script>
+    <script src="static/js/product.js"></script>
+    <script src="static/js/cart.js"></script>
 </body>
 </html>
