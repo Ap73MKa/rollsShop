@@ -1,6 +1,6 @@
 let slideArray = [
-    { 'img': './static/assets/card1.jpg', },
-    { 'img': './static/assets/card2.jpg', },
+    { 'img': 'card1.jpg', },
+    { 'img': 'card2.jpg', },
 ];
 
 slideArray = slideArray.flatMap(i => Array(5).fill(i));
@@ -12,7 +12,7 @@ slideArray.forEach ((item) => {
         `
         <div class="swiper-slide">
             <div class="swiper-image">
-                <img src="${item.img}" alt="">
+                <img src="images/${item.img}" alt="">
             </div>
         </div>
         `

@@ -1,0 +1,215 @@
+body, html {
+  font-family: "Open Sans", "Open Sans SemiBold", sans-serif;
+}
+
+body {
+  background: linear-gradient(-45deg, #feada6, #0cebeb, #f5efef);
+  background-size: 400% 400%;
+  animation: background 45s ease infinite;
+  height: 100vh;
+}
+
+@keyframes background {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+.wrapper {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.container-wrapper {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: flex;
+  min-width: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 100vh;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+  border-radius: 30px 0 0 30px;
+}
+
+.container-wrapper .container {
+  max-width: 1420px;
+  margin: 60px auto 0;
+  padding: 0 40px 0 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.sale-container {
+  width: 100%;
+  display: grid;
+  margin: 20px 0;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  flex-direction: column;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+}
+
+.sale-text {
+  text-align: center;
+  font-size: 22px;
+}
+
+.sale-item {
+  width: 32vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sale-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.sale-image img {
+  height: 100%;
+}
+
+.feedback-field {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.feedback-textarea {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 400px;
+  height: 50px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  resize: none;
+  overflow-y: hidden;
+  vertical-align: middle;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+  word-break: break-word;
+}
+
+.feedback-btn {
+  background: rgba(255, 255, 255, 0.4);
+  width: 150px;
+  height: 40px;
+  margin: 20px 0;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: ease .2s;
+}
+
+.feedback-btn:hover {
+  transform: scale(1.1);
+}
+
+.no-margin {
+  margin: 20px 0 !important;
+}
+
+.circle {
+  border-radius: 50px;
+}
+
+.shadow {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+}
+
+.hidden {
+  display: none;
+}
+
+.no-top {
+  margin-top: 0;
+}
+
+.border {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+@font-face {
+  font-family: "Open Sans", "Open Sans SemiBold", sans-serif;
+  src: url("fonts/OpenSans-Regular.ttf"),
+       url("fonts/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url("fonts/icomoon.ttf") format('truetype'),
+        url("fonts/icomoon.woff") format('woff');
+  //src:  url('./fonts/icomoon.eot?4vm95z#iefix') format('embedded-opentype'),
+  //      url('./fonts/icomoon.ttf?4vm95z') format('truetype'),
+  //      url('./fonts/icomoon.woff?4vm95z') format('woff'),
+  //      url('./fonts/icomoon.svg?4vm95z#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e90b";
+}
+.icon-gift:before {
+  content: "\e909";
+}
+.icon-home:before {
+  content: "\e900";
+}
+.icon-menu:before {
+  content: "\e901";
+}
+.icon-minus:before {
+  content: "\e902";
+}
+.icon-plus:before {
+  content: "\e903";
+}
+.icon-search:before {
+  content: "\e904";
+}
+.icon-settings:before {
+  content: "\e905";
+}
+.icon-shopping-bag:before {
+  content: "\e906";
+}
+.icon-shopping-cart:before {
+  content: "\e907";
+}
+.icon-user:before {
+  content: "\e908";
+}

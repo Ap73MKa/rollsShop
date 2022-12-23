@@ -8,7 +8,7 @@ function formProductHTML(productList) {
             `
         <div class="product">
             <div class="product-image">
-                <img src="${item.img}" alt="">
+                <img src="./images/${item.img}" alt="">
             </div>
             <div class="product-type shadow border">
                 <div class="product-text">
@@ -16,7 +16,7 @@ function formProductHTML(productList) {
                     <p class="product-class">${item.type}</p>
                     <div class="product-price">
                         <p>${item.price}.00 ₽</p>
-                        <div class="product-btn add-to-cart" data-name="${item.name}" data-img="${item.img}"
+                        <div class="product-btn add-to-cart" data-name="${item.name}" data-img="images/${item.img}"
                          data-type="${item.type}" data-price="${item.price}">
                             <span class="icon-plus"></span>
                         </div>
@@ -34,67 +34,67 @@ let productArray = [
     {
         'name': 'Калифорния',
         'type': 'Ролл',
-        'img': './static/assets/california.png',
+        'img': 'california.png',
         'price': 279
     },
     {
         'name': 'Филадельфия',
         'type': 'Ролл',
-        'img': './static/assets/philadelphia.png',
+        'img': 'philadelphia.png',
         'price': 359
     },
     {
         'name': 'Бонито',
         'type': 'Ролл',
-        'img': './static/assets/bonito.png',
+        'img': 'bonito.png',
         'price': 299
     },
     {
         'name': 'Ями',
         'type': 'Ролл',
-        'img': './static/assets/yami.png',
+        'img': 'yami.png',
         'price': 239
     },
     {
         'name': 'Гункан с лососем',
         'type': 'Гункан',
-        'img': './static/assets/gunkan_salmon.png',
+        'img': 'gunkan_salmon.png',
         'price': 89
     },
     {
         'name': 'Гункан с угрём',
         'type': 'Гункан',
-        'img': './static/assets/gunkan_eel.png',
+        'img': 'gunkan_eel.png',
         'price': 79
     },
     {
         'name': 'Гункан с курицей',
         'type': 'Гункан',
-        'img': './static/assets/gunkan_chicken.png',
+        'img': 'gunkan_chicken.png',
         'price': 74
     },
     {
         'name': 'Эби маки',
         'type': 'Маки ролл',
-        'img': './static/assets/maki_abi.png',
+        'img': 'maki_abi.png',
         'price': 169
     },
     {
         'name': 'Сяки маки',
         'type': 'Маки ролл',
-        'img': './static/assets/maki_saki.png',
+        'img': 'maki_saki.png',
         'price': 179
     },
     {
         'name': 'Унаги маки',
         'type': 'Маки ролл',
-        'img': './static/assets/maki_unagi.png',
+        'img': 'maki_unagi.png',
         'price': 189
     },
     {
         'name': 'Маки с огурцом',
         'type': 'Маки ролл',
-        'img': './static/assets/maki_cucu.png',
+        'img': 'maki_cucu.png',
         'price': 99
     },
 ];
