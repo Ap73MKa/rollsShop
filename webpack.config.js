@@ -60,6 +60,10 @@ module.exports = {
                 }
             },
             {
+                test: /\.(jpe?g|png|webp|gif|svg)$/i,
+                type: 'asset/resource',
+            }
+            {
                 test: /\.m?js$/i,
                 exclude: /(node_modules|bower_components)/,
                 use: {
