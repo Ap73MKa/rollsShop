@@ -1,3 +1,5 @@
+import {shuffle} from "./script";
+
 let slideArray = [
     { 'img': 'card1.jpg', },
     { 'img': 'card2.jpg', },
@@ -12,10 +14,12 @@ slideArray.forEach ((item) => {
         `
         <div class="swiper-slide">
             <div class="swiper-image">
-                <img src="images/${item.img}" alt="">
+                <img src="${require(`../images/${item.img}`)}" alt="">
             </div>
         </div>
         `
 });
 
-document.getElementById('slide-out').innerHTML = slideHTML;
+try {
+    document.getElementById('slide-out').innerHTML = slideHTML;
+} catch (e) {}

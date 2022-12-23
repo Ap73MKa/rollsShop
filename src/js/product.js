@@ -8,7 +8,7 @@ function formProductHTML(productList) {
             `
         <div class="product">
             <div class="product-image">
-                <img src="./images/${item.img}" alt="">
+                <img src="${require(`../images/${item.img}`)}" alt="">
             </div>
             <div class="product-type shadow border">
                 <div class="product-text">
@@ -16,7 +16,7 @@ function formProductHTML(productList) {
                     <p class="product-class">${item.type}</p>
                     <div class="product-price">
                         <p>${item.price}.00 ₽</p>
-                        <div class="product-btn add-to-cart" data-name="${item.name}" data-img="images/${item.img}"
+                        <div class="product-btn add-to-cart" data-name="${item.name}" data-img="${require(`../images/${item.img}`)}"
                          data-type="${item.type}" data-price="${item.price}">
                             <span class="icon-plus"></span>
                         </div>

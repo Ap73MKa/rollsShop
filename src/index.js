@@ -5,3 +5,4 @@ import './js/cart';
 import './js/product';
 import './js/slide';
 import './js/sale';
+import './js/swiper';

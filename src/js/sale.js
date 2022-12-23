@@ -1,3 +1,5 @@
+import {shuffle} from "./script";
+
 let saleArray = [
     {
         'img': './static/assets/card1.jpg',
@@ -25,4 +27,6 @@ saleArray.forEach ((item) => {
         `
 });
 
-document.getElementById('sale-out').innerHTML = saleHTML;
+try {
+    document.getElementById('sale-out').innerHTML = saleHTML;
+} catch (e) {}
