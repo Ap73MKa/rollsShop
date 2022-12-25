@@ -110,58 +110,64 @@ function displayCart() {
         cartArray.forEach(item => {
             output +=
                 `
-                <div class="cart-row">
-                        <div class="cart-td">
-                            <div class="cart-image">
+                <div class="cart__table-row">
+                        <div class="cart__table-td">
+                            <div class="cart__image">
                                 <img src="${item.img}" alt="">
                             </div>
                         </div>
-                        <div class="cart-td">
-                            <div class="cart-text">
+                        <div class="cart__table-td">
+                            <div class="cart__table-text">
                                 <h1>${item.name}</h1>
                                 <h2>${item.type}</h2>
                             </div>
                         </div>
-                        <div class="cart-td">
-                            <div class="cart-count">
-                                <div class="cart-count-blocks">
+                        <div class="cart__table-td">
+                            <div class="cart__counter">
+                                <div class="cart__counter-icon">
                                     <span class="icon-minus" id="minus-item" data-name="${item.name}"></span>
                                 </div>
                                 <p>${item.count}</p>
-                                <div class="cart-count-blocks">
+                                <div class="cart__counter-icon">
                                     <span class="icon-plus" id="plus-item" data-name="${item.name}"></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cart-td">
+                        <div class="cart__table-td">
                             <p>${item.total}.00 ₽</p>
                         </div>
                     </div>
                 `
         });
-    document.querySelector('.show-cart').innerHTML = output;
-    document.querySelector('.total-cart').innerHTML = shoppingCart.totalCart() + ".00 ₽";
-    let productCount = shoppingCart.totalCount();
+    document.getElementById('cart-table').innerHTML = output;
+    document.getElementById('cart-total').innerHTML = shoppingCart.totalCart() + ".00 ₽";
     let counter = document.getElementById('product-counter');
+    let productCount = shoppingCart.totalCount();
+
     if (productCount <= 0)
         counter.style.display = 'None';
-    else
-    {
-        counter.style.display = 'block';
+    else {
+        counter.style.display = 'flex';
         counter.innerHTML = '' + productCount;
     }
 }
 
-document.getElementById('cart-icon').addEventListener('click', () => {
-    document.getElementById('cart-wrapper').classList.remove("hidden");
-});
+let cart_element = document.getElementById('cart-wrapper');
 
-document.addEventListener('keydown', function(event) {
+cart_element.addEventListener('keydown', function(event) {
     if (event.key === 'Escape')
-        document.getElementById('cart-wrapper').classList.add("hidden");
+        cart_element.style.display = 'none';
 });
 
-document.querySelectorAll('.add-to-cart').forEach((element) => {
+document.getElementById('cart-icon').addEventListener('click', () => {
+    cart_element.style.display = 'flex';
+});
+
+document.getElementById('icon__cart-close').addEventListener('click', () => {
+    cart_element.style.display = 'none';
+})
+
+document.querySelectorAll('.product__btn').forEach((element) => {
     element.addEventListener('click', function(event) {
         event.preventDefault();
 
@@ -186,16 +192,12 @@ document.querySelectorAll('.add-to-cart').forEach((element) => {
     });
 });
 
-document.querySelector('.clear-cart').addEventListener('click', () => {
+document.getElementById('cart-clear').addEventListener('click', () => {
     shoppingCart.clearCart();
     displayCart();
 });
 
-document.getElementById('close-cart').addEventListener('click', () => {
-    document.getElementById('cart-wrapper').classList.add("hidden");
-})
-
-document.querySelector('.show-cart').addEventListener('click', function(event) {
+document.getElementById('cart-table').addEventListener('click', function(event) {
     if (event.target.id === 'minus-item') {
         shoppingCart.removeItemFromCart(event.target.dataset.name);
         displayCart();

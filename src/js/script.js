@@ -11,16 +11,16 @@ function shuffle(array) {
 
 export {shuffle};
 
-// function set_selected(el_id) {
-//     let list = document.getElementsByClassName('selected');
-//     Array.from(list).forEach((elem) => { elem.classList.remove('selected'); });
-//     document.getElementById(el_id).classList.add("selected")
-// }
+function set_selected(el_id) {
+    let list = document.getElementsByClassName('selected');
+    Array.from(list).forEach((elem) => { elem.classList.remove('selected'); });
+    document.getElementById(el_id).classList.add("selected")
+}
 
-document.getElementById('menu-icon').addEventListener('click', () => {
-   let nav = document.getElementById('nav-bar');
-   if (nav.style.display === 'flex')
-       nav.style.display = 'None';
+document.getElementById('icon-nav').addEventListener('click', () => {
+   let elem = document.getElementById('nav-bar');
+   if (elem.style.display === 'flex')
+       elem.style.display = 'none';
    else
-       nav.style.display = 'flex';
+       elem.style.display = 'flex';
 });

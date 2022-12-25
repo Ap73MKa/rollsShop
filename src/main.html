@@ -4,98 +4,94 @@
     <meta charset="UTF-8">
     <title>Планета Ролл - Главная страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/logo_main1.png">
 </head>
 <body>
     <div class="wrapper">
         <div class="nav-bar" id="nav-bar">
-            <a class="icon-block" href="index.html" title="Главная страница">
-                <div id="mark1" class="pre-selected selected" onclick="set_selected('mark1')">
+            <a class="nav-bar__item" href="#" title="Главная страница">
+                <div class="nav-bar__icon nav-bar__icon-selected">
                     <span class="icon-home"></span>
                 </div>
             </a>
-            <a class="icon-block" href="html/catalog.html" title="Каталог">
-                <div id="mark2" class="pre-selected" onclick="set_selected('mark2')">
+            <a class="nav-bar__item" href="#" title="Каталог">
+                <div class="nav-bar__icon">
                     <span class="icon-shopping-cart"></span>
                 </div>
             </a>
-            <a class="icon-block" href="html/sales.html" title="Акции">
-                <div id="mark3" class="pre-selected" onclick="set_selected('mark3')">
+            <a class="nav-bar__item" href="#" title="Акции">
+                <div class="nav-bar__icon">
                     <span class="icon-gift"></span>
                 </div>
             </a>
-            <a class="icon-block" href="html/support.html" title="Поддержка">
-                <div id="mark4" class="pre-selected" onclick="set_selected('mark4')">
+            <a class="nav-bar__item" href="#" title="Поддержка">
+                <div class="nav-bar__icon">
                     <span class="icon-settings"></span>
                 </div>
             </a>
         </div>
         <div class="container-wrapper border">
             <div class="header">
-                <div class="header-icon menu-icon" id="menu-icon">
+                <div class="header__icon header__icon-nav" id="icon-nav" title="Меню">
                     <span class="icon-menu"></span>
                 </div>
-                <div class="header-logo">
+                <div class="header__logo">
                     <img src="images/logo.png" alt="">
                     <p>Планета Ролл</p>
                 </div>
-                <div class="header-search border">
-                    <div class="header-search-inner">
+                <div class="search">
+                    <div class="search__inner">
                         <label>
                             <input type="text" placeholder="Поиск">
                         </label>
                     </div>
                 </div>
-                <div class="hidden">
-                    <div class="header-icon border">
-                        <span class="icon-search"></span>
-                    </div>
+                <div class="header__icon header__icon-search" title="Поиск">
+                    <span class="icon-search"></span>
                 </div>
-                <div class="header-icon border" id="cart-icon">
-                    <div class="header-counter border" id="product-counter" style="display: none;">0</div>
+                <div class="header__icon" id="cart-icon" title="Корзина">
+                    <div class="header__icon-counter" id="product-counter" style="display: none;">0</div>
                     <span class="icon-shopping-bag"></span>
                 </div>
-                <div class="header-icon border">
+                <div class="header__icon" title="Пользователь">
                     <span class="icon-user"></span>
                 </div>
             </div>
             <div class="container">
                 <div class="swiper-container">
                     <div class="swiper">
-                        <div id="slide-out" class="swiper-wrapper"></div>
-                        <div class="swiper-pagination swiper-pagination-custom"></div>
+                        <div class="swiper-wrapper" id="slide-out" ></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
                 </div>
                 <p class="container-title">Новинки</p>
-                <div class="product-list" id="product-all-out"></div>
+                <div class="product__container" id="product-all-out"></div>
             </div>
         </div>
     </div>
-    <div id="cart-wrapper" class="cart-wrapper hidden">
-        <div class="cart-container">
-            <div class="cart-header">
+    <div class="cart__wrapper" id="cart-wrapper" style="display: none">
+        <div class="cart__container">
+            <div class="cart__header">
                 <p>Корзина</p>
-                <div class="cart-icon" id="close-cart">
+                <div class="cart__header-icon" id="icon__cart-close">
                     <span class="icon-close"></span>
                 </div>
             </div>
-            <div class="cart-table show-cart"></div>
-            <div class="cart-table no-top">
-                <div class="cart-row">
-                    <div class="cart-td"></div>
-                    <div class="cart-td"></div>
-                    <div class="cart-td">
+            <div class="cart__table" id="cart-table"></div>
+            <div class="cart__table no-top">
+                <div class="cart__table-row">
+                    <div class="cart__table-td"></div>
+                    <div class="cart__table-td"></div>
+                    <div class="cart__table-td">
                         <p>Сумма:</p>
                     </div>
-                    <div class="cart-td total-cart">
+                    <div class="cart__table-td" id="cart-total">
                         <p>0 ₽</p>
                     </div>
                 </div>
             </div>
-            <div class="cart-btn-block clear-cart">
-                <div class="cart-btn">
+            <div class="cart__btn-wrapper" id="cart-clear">
+                <div class="cart__btn">
                     <p>Оформить заказ</p>
                 </div>
             </div>

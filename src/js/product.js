@@ -4,19 +4,20 @@
 function formProductHTML(productList) {
     let finalHTML = '';
     productList.forEach ((item) => {
+        let image = require(`../images/${item.img}`);
         finalHTML +=
-            `
+        `
         <div class="product">
-            <div class="product-image">
-                <img src="${require(`../images/${item.img}`)}" alt="">
+            <div class="product__image">
+                <img src="${image}" alt="">
             </div>
-            <div class="product-type shadow border">
-                <div class="product-text">
-                    <p class="product-title">${item.name}</p>
-                    <p class="product-class">${item.type}</p>
-                    <div class="product-price">
+            <div class="product__info">
+                <div class="product__text">
+                    <p class="product__text-title">${item.name}</p>
+                    <p class="product__text-type">${item.type}</p>
+                    <div class="product__price">
                         <p>${item.price}.00 ₽</p>
-                        <div class="product-btn add-to-cart" data-name="${item.name}" data-img="${require(`../images/${item.img}`)}"
+                        <div class="product__btn" data-name="${item.name}" data-img="${image}"
                          data-type="${item.type}" data-price="${item.price}">
                             <span class="icon-plus"></span>
                         </div>

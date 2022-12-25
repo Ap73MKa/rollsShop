@@ -1,5 +1,6 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 
 const mode = process.env.NODE_ENV || 'development';
@@ -14,7 +15,7 @@ module.exports = {
     devServer: {
         hot: true,
     },
-    entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+    entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'main.js')],
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
@@ -27,7 +28,12 @@ module.exports = {
             filename: 'bundle.[contenthash].css',
         }),
         new HTMLWebpackPlugin({
-            template: path.resolve(__dirname, 'src', 'index.html')
+            template: path.resolve(__dirname, 'src', 'main.html')
+        }),
+        new FaviconsWebpackPlugin({
+            logo: path.resolve(__dirname, 'src/images/', 'favicon.png'),
+            mode: devMode ? 'light' : 'webapp',
+            prefix: 'favicon/',
         })
     ],
     module: {
