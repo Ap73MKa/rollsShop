@@ -35,7 +35,7 @@
   filter: blur(2px);
 
   @media (max-width: 1024px) {
-    width: 58vw;
+    width: 58vw !important;
     height: 20vw;
   }
 }
